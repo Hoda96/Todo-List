@@ -1,0 +1,223 @@
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@300family=Raleway:ital,wght@0,200;0,400;0,500;0,700;0,800;1,200;1,300;1,400&display=swap');
+         :root {
+            --Bright-Blue: hsl(220, 98%, 61%);
+            --Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+            /*Light Theme*/
+            --Very-Light-Gray: hsl(0, 0%, 98%);
+            --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+            --Light-Grayish-Blue: hsl(233, 11%, 84%);
+            --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+            --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+            /*Dark Theme*/
+            --Very-Dark-Blue: hsl(235, 21%, 11%);
+            --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+            --Light-Grayish-Blue: hsl(234, 39%, 85%);
+            --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+            --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+            --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+            --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+            --body-font-size: 18px;
+            --font-family: 'Josefin Sans', sans-serif;
+            --font-weight-regular: 400;
+            --font-weight-bold: 700;
+        }
+        
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /* overflow: hidden; */
+        }
+        
+        body {
+            background-color: var(--Very-Light-Grayish-Blue);
+            font-family: var(--font-family);
+            /* height: 100vh; */
+        }
+        
+        .toggle-mode:hover {
+            cursor: pointer;
+        }
+        
+        .bg-img {
+            background-image: url('./images/bg-desktop-light.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 35vh;
+            max-width: 100%;
+        }
+        
+        .title {
+            letter-spacing: 15px;
+        }
+        
+        .input-container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 1rem 0 1rem 0;
+            border-radius: 8px;
+        }
+        
+        .add-list-button {
+            width: 25px;
+            height: 25px;
+            border: 1px solid #aaa8a8;
+            border-radius: 50%;
+            background-color: #fff;
+            /* transition: all 200ms ease-in-out; */
+        }
+        
+        .add-list-button:active {
+            /* background-color: #807e7e; */
+            background: url('./images/icon-check.svg'), linear-gradient(hsl(220deg, 80%, 80%), hsl(250deg, 80%, 80%));
+            background-position: center;
+            background-size: auto;
+            background-repeat: no-repeat;
+        }
+        /* .form-control {
+            box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.3);
+        } */
+        /* .form-control input[type="text"]::placeholder {
+            padding-left: 10px;
+        } */
+        /* .input-group-text::before {
+        position: absolute;
+        content: ' ';
+        height: 25px;
+        width: 25px;
+        border-radius: 55px;
+        color: var(--Very-Light-Gray); */
+        /* border: 1px solid red; */
+        /* border: 1px solid var(--Light-Grayish-Blue); */
+        /* margin: 1rem; */
+        /* z-index: 10;
+} */
+        
+        .input-group-text {
+            padding: 0;
+        }
+        /* 
+.form-control,
+.input-group-text {
+    border: none !important;
+} */
+        
+        .form-check-input2:checked[type="radio"] {
+            /* background-image: url('./images/icon-check.svg')     !important; */
+            border: 1px solid var(--Very-Dark-Grayish-Blue);
+            background-color: var(--Check-Background);
+        }
+        
+        .todo-container {
+            box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.3);
+            background-color: #fff;
+            border-radius: 8px;
+        }
+        
+        .tasks-wrapper {
+            padding: 10px;
+            border-bottom: 1px solid antiquewhite;
+        }
+        
+        .tasks-wrapper::before {
+            position: absolute;
+            content: ' ';
+            height: 25px;
+            width: 25px;
+            border-radius: 55px;
+            color: var(--Dark-Grayish-Blue);
+            border: 1px solid var(--Light-Grayish-Blue);
+        }
+        /* .tasks-wrapper::after {
+        margin-right: 5px;
+    } */
+        
+        .tasks-wrapper:hover::before,
+        .tasks-wrapper:hover,
+        .input-container:hover::before {
+            cursor: pointer;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .tasks-list {
+            margin-top: 6rem;
+        }
+        
+        .tasks-control p {
+            color: var(--Dark-Grayish-Blue);
+            font-size: .8rem;
+        }
+        
+        .tasks-control:hover {
+            cursor: pointer;
+        }
+        
+        .tasks-control p:hover {
+            color: var(--Bright-Blue);
+        }
+        
+        ul li.checked {
+            color: var(--Light-Grayish-Blue);
+            text-decoration: line-through;
+        }
+        
+        ul li.checked::before {
+            /* background: linear-gradient(hsl(220deg, 80%, 80%), hsl(250deg, 80%, 80%)); */
+            background: url('./images/icon-check.svg'), linear-gradient(hsl(220deg, 80%, 80%), hsl(250deg, 80%, 80%));
+            background-position: center;
+            background-size: auto;
+            background-repeat: no-repeat;
+        }
+        
+        .input-wrapper {
+            position: relative;
+            /* margin: 10px; */
+        }
+        /* .input-wrapper input {
+        padding: 10px;
+    } */
+        
+        .input-wrapper label {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        
+        .input-wrapper input:focus+label,
+        .input-wrapper input:not(:placeholder-shown)+label {
+            top: 43px;
+            left: 60px;
+            /* font-size: 12px; */
+            /* padding: 0 5px; */
+        }
+        
+        .task {
+            background-color: #fff;
+            font-size: larger;
+            color: aqua;
+            align-self: center;
+            margin-left: 13px;
+        }
+        
+        .dark {
+            background-color: aqua;
+        }
+        /* another theme */
+        
+        body.dark {
+            background: var(--Very-Dark-Blue);
+        }
+        
+        body.dark .bg-img {
+            background-image: url(./images/bg-desktop-dark.jpg);
+        }
