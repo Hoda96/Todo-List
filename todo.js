@@ -60,9 +60,9 @@ function addNewTasks(e) {
       // console.log(newTask);
 
       const markup = `
-    <li class="shadow-sm py-3 px-2">
+    <li class="task-done shadow-sm py-3 px-2">
       <input class="form-check-input ms-2 " type="checkbox" value="" id="accept">
-      <label class=" form-check-label task-done ps-3" for="accept">${newTask}</label>
+      <label class=" form-check-label  ps-3" for="accept">${newTask}</label>
     </li>
  
     `;
@@ -83,6 +83,10 @@ function addNewTasks(e) {
     checkbox.addEventListener("click", function () {
       if (checkbox.checked == true) {
         console.log("checked");
+        // var checkboxes = document.querySelectorAll(
+        //   'input[type="checkbox"]:checked'
+        // );
+        // console.log(checkboxes);
         taskDone.classList.toggle("checked");
         // taskDone.style.color = "var(--Light-Grayish-Blue)";
 
@@ -96,47 +100,3 @@ function addNewTasks(e) {
 const clear = function () {
   input.value = " ";
 };
-
-// toggleMode.addEventListener('click', function() {
-
-//     // if (toggleMode.src.includes('./images/icon-moon.svg')) {
-//     document.body.style.backgroundColor = 'var(--Very-Dark-Blue)';
-
-//     task.innerHTML = "hi";
-//     toggleMode.src = './images/icon-sun.svg';
-//     mainBg.style.backgroundImage = 'url(./images/bg-desktop-dark.jpg)';
-
-//     for (let i = 0; i < tasksWrapper.length; i++) {
-//         tasksWrapper[i].style.backgroundColor = 'var( --Very-Dark-Grayish-Blue)';
-
-//     }
-
-//     for (let i = 0; i < tasksList.length; i++) {
-//         tasksList[i].style.color = '#fff';
-
-//         // if (li.classList.contains('checked')) {
-//         //     tasksList.style.color = 'var(--Dark-Grayish-Blue)';
-//         // }
-//     }
-
-//     tasksControlRow.style.backgroundColor = 'var( --Very-Dark-Grayish-Blue)';
-
-//     todoInput.style.backgroundColor = 'var( --Very-Dark-Grayish-Blue)';
-//     todoInput.style.color = 'fff';
-
-//     newTaskTitle.style.color = 'var(--Dark-Grayish-Blue)';
-
-//     // }
-
-// })
-
-// todoInput.addEventListener('keypress', function() {
-//     if (todoInput.value === '') {
-//         alert('Please add a to do.')
-//     } else {
-//         let li = document.createElement('li');
-//         li.innerHTML = todoInput.value;
-//         tasksList.appendChild(li);
-//     }
-
-// })
