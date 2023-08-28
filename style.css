@@ -1,4 +1,5 @@
-        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@300family=Raleway:ital,wght@0,200;0,400;0,500;0,700;0,800;1,200;1,300;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@300family=Raleway:ital,wght@0,200;0,400;0,500;0,700;0,800;1,200;1,300;1,400&display=swap');
          :root {
             --Bright-Blue: hsl(220, 98%, 61%);
             --Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
@@ -14,7 +15,6 @@
             --Light-Grayish-Blue: hsl(234, 39%, 85%);
             --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
             --Dark-Grayish-Blue: hsl(234, 11%, 52%);
-            --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
             --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
             --body-font-size: 18px;
             --font-family: 'Josefin Sans', sans-serif;
@@ -26,6 +26,7 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+            
             /* overflow: hidden; */
         }
         
@@ -43,8 +44,8 @@
             background-image: url('./images/bg-desktop-light.jpg');
             background-position: center;
             background-size: cover;
-            height: 35vh;
-            max-width: 100%;
+            height: 30vh;
+            /* max-width: 100%; */
         }
         
         .title {
@@ -96,8 +97,12 @@
 } */
         
         .input-group-text {
-            padding: 0;
+            /* background-color: #fff ; */
         }
+        .form-control:focus {
+            border-color: #FF0000;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+          }
         /* 
 .form-control,
 .input-group-text {
@@ -110,13 +115,13 @@
             background-color: var(--Check-Background);
         }
         
-        .todo-container {
+        /* .todo-container {
             box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.3);
             -webkit-box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.3);
             -moz-box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.3);
             background-color: #fff;
             border-radius: 8px;
-        }
+        } */
         
         .tasks-wrapper {
             padding: 10px;
@@ -163,18 +168,12 @@
             color: var(--Bright-Blue);
         }
         
-        ul li.checked {
+         ul li.checked {
             color: var(--Light-Grayish-Blue);
             text-decoration: line-through;
         }
         
-        ul li.checked::before {
-            /* background: linear-gradient(hsl(220deg, 80%, 80%), hsl(250deg, 80%, 80%)); */
-            background: url('./images/icon-check.svg'), linear-gradient(hsl(220deg, 80%, 80%), hsl(250deg, 80%, 80%));
-            background-position: center;
-            background-size: auto;
-            background-repeat: no-repeat;
-        }
+
         
         .input-wrapper {
             position: relative;
@@ -208,10 +207,15 @@
             align-self: center;
             margin-left: 13px;
         }
+
+.add-task{
+    background-color: var(--Very-Light-Gray);
+}
+.input-task{
+    margin-top: -2rem;
+}
         
-        .dark {
-            background-color: aqua;
-        }
+
         /* another theme */
         
         body.dark {
@@ -221,3 +225,35 @@
         body.dark .bg-img {
             background-image: url(./images/bg-desktop-dark.jpg);
         }
+       
+        
+        body.dark  li,
+        
+        body.dark .tasks-control {
+            color: #fff;
+            background-color: var(--Very-Dark-Grayish-Blue);
+            border: none;
+            border-radius: var(--bs-border-radius);
+        
+        }
+        body.dark .add-task-input{
+            color: #fff;
+            background-color: var(--Very-Dark-Grayish-Blue);
+            border: none;
+            border-bottom-right-radius: var(--bs-border-radius);
+            border-top-right-radius: var(--bs-border-radius);
+        }
+        
+        body.dark .add-new-task {
+            color: var(--Light-Grayish-Blue);
+            background-color: var( --Very-Dark-Grayish-Blue);
+        }
+        
+        body.dark input::placeholder {
+            color: #aaa8a8;
+        }
+        body.dark  ul li.checked {
+            color: var(--Light-Grayish-Blue);
+            text-decoration: line-through;
+        }
+        
